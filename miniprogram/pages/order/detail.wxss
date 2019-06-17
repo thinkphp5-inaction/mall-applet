@@ -1,0 +1,32 @@
+/* miniprogram/pages/order/detail.wxss */
+.page-order {
+    background: #f9f9f9;
+    height    : 100%;
+}
+
+.info {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    padding        : 10px 15px;
+    border-bottom  : 1px solid #eee;
+    background     : white
+}
+
+.info .name {
+    width    : 64px;
+    font-size: 14px;
+    color    : #666;
+}
+
+.info .value {
+    flex      : 1;
+    color     : #333;
+    font-size : 14px;
+    text-align: right
+}
+
+.btn-pay {
+    margin : 15px 0;
+    padding: 0 15px;
+}

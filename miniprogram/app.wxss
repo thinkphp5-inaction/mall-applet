@@ -1,0 +1,88 @@
+page {
+    height: 100%;
+    color : #333;
+}
+
+.icon {
+    width : 20px;
+    height: 20px;
+}
+
+.list {
+    border-top   : 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.list .list-item {
+    border-bottom  : 1px solid #eee;
+    padding        : 10px 15px;
+    background     : white;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    line-height    : 1.5;
+}
+
+.list .list-item .primary {
+    display  : block;
+    font-size: 14px;
+}
+
+.list .list-item .secondary {
+    display  : block;
+    color    : #999;
+    font-size: 14px;
+}
+
+.form-group {
+    padding      : 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-group-static {
+    border-bottom: 0;
+}
+
+.form-group-inline {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.form-group .form-control {
+    width: 100%;
+}
+
+.label {
+    font-size    : 12px;
+    padding      : 4px 8px;
+    border-radius: 4px;
+    background   : #aaa;
+    color        : white;
+}
+
+.label.label-success {
+    background: #179B16
+}
+
+.text-center {
+    text-align: center
+}
+
+.text-danger {
+    color: red;
+}
+
+.text-loading {
+    color  : #999;
+    padding: 20px;
+}
+
+.section-title {
+    background   : white;
+    padding      : 8px 15px;
+    border-left  : 4px solid red;
+    border-bottom: 1px solid #eee;
+    border-top   : 1px solid #eee;
+    margin-top   : 10px;
+}

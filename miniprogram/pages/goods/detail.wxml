@@ -1,0 +1,25 @@
+<!-- miniprogram/pages/goods/detail.wxml -->
+<view class="page-goods">
+    <view class="text-center text-loading" wx:if="{{!goods}}">加载中...</view>
+    <view class="goods" wx:else>
+        <view class="thumb-container">
+            <image class="thumb" src="{{goods.thumb}}" />
+        </view>
+        <view class="info">
+            <view class="title">{{goods.title}}</view>
+            <view class="description">{{goods.description}}</view>
+            <view class="stock">库存:{{goods.stock}}</view>
+        </view>
+        <view class="content">
+            <text class="title">商品详情</text>
+            {{goods.content}}
+        </view>
+        <view class="action-bar">
+            <text class="price">￥{{goods.price}}</text>
+            <button open-type="share" class="action-share">
+                <image style="width:32px;height:32px;" src="../../assets/icon-share.png" />
+            </button>
+            <text bindtap="handleBuy" class="action-buy">购买</text>
+        </view>
+    </view>
+</view>

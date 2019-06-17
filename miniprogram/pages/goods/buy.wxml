@@ -1,0 +1,32 @@
+<!-- miniprogram/pages/goods/detail.wxml -->
+<view class="page-buy-goods">
+    <view class="text-center text-loading" wx:if="{{!goods}}">加载中...</view>
+    <view wx:else>
+        <view class="section-title">商品信息</view>
+        <view class="goods">
+            <view class="title">{{goods.title}}</view>
+            <view class="description">{{goods.description}}</view>
+            <view class="stock">库存:{{goods.stock}}</view>
+        </view>
+        <view class="section-title">收货地址</view>
+        <view class="list">
+            <view bindtap="handleAddressTap" class="list-item" wx:key="{{item.id}}" wx:for="{{addresses}}" data-id="{{item.id}}">
+                <view>
+                    <view class="primary">
+                        {{item.realname}} {{item.phone}}
+                        <text class="label label-success" wx:if="{{item.default}}">默认</text>
+                    </view>
+                    <view class="secondary">{{item.address}}</view>
+                </view>
+                <image src="../../assets/icon-check-success.png" class="icon" wx:if="{{item.id===selectedAddressId}}" />
+            </view>
+            <view class="list-item" bindtap="handleAddAddress">
+                <text>添加新地址</text>
+                <image class="icon" src="../../assets/icon-arrow-right.png" />
+            </view>
+        </view>
+        <view class="btn-buy">
+            <button bindtap="handleBuy" loading="{{loading}}" type="primary">购买</button>
+        </view>
+    </view>
+</view>

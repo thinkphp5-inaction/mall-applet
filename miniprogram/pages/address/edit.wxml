@@ -1,0 +1,33 @@
+<!-- miniprogram/pages/address/edit.wxml -->
+<view class="page-address-edit">
+    <view class="text-center text-loading" wx:if="{{!address}}">加载中...</view>
+    <view wx:else>
+        <form bindsubmit="handleSubmit">
+            <view class="form-group">
+                <label class="control-label" for="realname">联系人</label>
+                <input class="form-control" value="{{address.realname}}" maxlength="10" placeholder="联系人姓名" name="realname" />
+            </view>
+            <view class="form-group">
+                <label class="control-label" for="phone">手机</label>
+                <input class="form-control" value="{{address.phone}}" maxlength="11" name="phone" placeholder="联系人手机号码" />
+            </view>
+            <view class="form-group">
+                <label for="address" class="control-label">地址</label>
+                <textarea name="address" maxlength="100" class="form-control" value="{{address.address}}" placeholder="联系人详细地址">
+                </textarea>
+            </view>
+            <view class="form-group form-group-inline">
+                <label for="default" class="control-label">设为默认</label>
+                <switch name="default" checked="{{address.default}}" />
+            </view>
+            <view class="form-group form-group-static">
+                <button form-type="submit" type="primary" loading="{{loading}}">保存</button>
+            </view>
+            <view class="form-group form-group-static">
+                <view class="text-danger text-center" bindtap="handleDelete">
+                    删除该地址
+                </view>
+            </view>
+        </form>
+    </view>
+</view>

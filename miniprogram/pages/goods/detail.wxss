@@ -1,0 +1,93 @@
+/* miniprogram/pages/goods/detail.wxss */
+.page-goods {
+    background: #f9f9f9;
+    height    : 100%;
+}
+
+.goods {
+    padding-bottom: 48px;
+}
+
+.thumb-container {
+    background     : #f9f9f9;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+.info {
+    background   : white;
+    line-height  : 1.5;
+    border-top   : 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    color        : #333;
+    padding      : 10px 15px;
+}
+
+.title {
+    font-size: 18px;
+}
+
+.description {
+    font-size: 16px;
+    color    : #999;
+}
+
+.stock {
+    font-size: 16px;
+}
+
+.action-bar {
+    position       : fixed;
+    height         : 48px;
+    width          : 100%;
+    bottom         : 0;
+    left           : 0;
+    background     : white;
+    border-top     : 1px solid #eee;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between
+}
+
+.action-bar .price {
+    color       : red;
+    flex        : 1;
+    padding-left: 15px;
+}
+
+.action-bar .action-share {
+    padding        : 0 20px;
+    background     : none;
+    border         : none;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+.action-bar .action-share:after {
+    border: none;
+}
+
+.action-bar .action-buy {
+    padding    : 0 30px;
+    display    : block;
+    color      : white;
+    background : red;
+    height     : 100%;
+    line-height: 48px;
+}
+
+.content {
+    padding    : 15px;
+    line-height: 1.5;
+    font-size  : 16px;
+    color      : #333;
+    background : white
+}
+
+.content .title {
+    font-weight  : bold;
+    display      : block;
+    margin-bottom: 15px;
+}

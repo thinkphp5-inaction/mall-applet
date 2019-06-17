@@ -1,0 +1,14 @@
+<!-- miniprogram/pages/order/list.wxml -->
+<view class="page-orders">
+    <view class="item" wx:for="{{list}}" data-id="{{item.order_id}}" bindtap="handleItemTap">
+        <image class="thumb" src="{{item.snapshot.thumb}}" />
+        <view class="info">
+            <view class="title">
+                <text>{{item.title}}</text>
+                <text class="label" wx:if="{{item.status===0}}">未支付</text>
+                <text class="label label-success" wx:if="{{item.status===1}}">已支付</text>
+            </view>
+            <text class="price">￥{{item.price}}</text>
+        </view>
+    </view>
+</view>

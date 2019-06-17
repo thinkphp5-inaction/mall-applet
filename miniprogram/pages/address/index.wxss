@@ -1,0 +1,9 @@
+/* miniprogram/pages/address/index.wxss */
+.page-address {
+    background: #f9f9f9;
+}
+
+.btn-container {
+    padding   : 0 15px;
+    margin-top: 20px;
+}

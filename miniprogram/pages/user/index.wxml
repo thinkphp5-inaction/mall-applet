@@ -1,0 +1,19 @@
+<!-- miniprogram/pages/user/index.wxml -->
+<view class="page-user">
+    <view class="user">
+        <image class="avatar" src="{{user.avatar}}"></image>
+        <view class="info">
+            <text class="nickname">{{user.nickname}}</text>
+        </view>
+    </view>
+    <view class="list">
+        <view class="list-item" bindtap="navigateToAddress">
+            <text>地址管理</text>
+            <image class="icon" src="../../assets/icon-arrow-right.png"></image>
+        </view>
+        <view class="list-item" bindtap="navigateToOrders">
+            <text>订单管理</text>
+            <image class="icon" src="../../assets/icon-arrow-right.png"></image>
+        </view>
+    </view>
+</view>

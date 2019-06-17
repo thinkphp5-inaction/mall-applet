@@ -1,0 +1,41 @@
+/* miniprogram/pages/order/list.wxss */
+.page-orders {
+    height    : 100%;
+    background: #f9f9f9;
+}
+
+.item {
+    background     : white;
+    padding        : 10px 15px;
+    border-bottom  : 1px solid #eee;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.item .thumb {
+    width       : 64px;
+    height      : 64px;
+    margin-right: 10px;
+}
+
+.item .info {
+    flex       : 1;
+    line-height: 1.5;
+}
+
+.item .info .label {
+    margin-left: 8px;
+}
+
+.item .info .title {
+    font-size: 16px;
+    color    : #333;
+    display  : block;
+}
+
+.item .info .price {
+    font-size: 16px;
+    color    : red;
+    display  : block;
+}

@@ -1,0 +1,11 @@
+<!-- index.wxml -->
+<view class="page-index">
+    <view class="item" wx:key="{{item.id}}" wx:for="{{list}}" data-id="{{item.id}}" bindtap="handleItemTap">
+        <image class="thumb" src="{{item.thumb}}"></image>
+        <view class="info">
+            <text class="title">{{item.title}}</text>
+            <text class="description">{{item.description}}</text>
+            <text class="price">￥{{item.price}}</text>
+        </view>
+    </view>
+</view>

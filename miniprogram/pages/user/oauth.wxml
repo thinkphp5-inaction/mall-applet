@@ -1,0 +1,6 @@
+<!-- miniprogram/pages/user/oauth.wxml -->
+<view class="page-oauth">
+    <button class="btn-oauth" type="primary" loading="{{loading}}" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">
+        授权登录
+    </button>
+</view>

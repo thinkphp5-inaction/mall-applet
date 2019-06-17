@@ -1,0 +1,55 @@
+<!-- miniprogram/pages/order/detail.wxml -->
+<view class="page-order" wx:if="{{order}}">
+    <view class="section-title">订单信息</view>
+    <view class="info">
+        <text class="name">名称</text>
+        <text class="value">{{order.title}}</text>
+    </view>
+    <view class="info">
+        <text class="name">价格</text>
+        <text class="value">￥{{order.price}}</text>
+    </view>
+    <view class="info">
+        <text class="name">状态</text>
+        <text class="value" wx:if="{{order.status===0}}">未支付</text>
+        <text class="value" wx:if="{{order.status===1}}">已支付</text>
+    </view>
+    <view class="info">
+        <text class="name">下单时间</text>
+        <text class="value">{{order.created_at}}</text>
+    </view>
+    <view class="info">
+        <text class="name">支付时间</text>
+        <text class="value" wx:if="{{order.status===0}}">未支付</text>
+        <text class="value" wx:else>{{order.pay_at}}</text>
+    </view>
+    <view class="section-title">收货信息</view>
+    <view class="info">
+        <text class="name">联系人</text>
+        <text class="value">{{order.realname}}</text>
+    </view>
+    <view class="info">
+        <text class="name">联系电话</text>
+        <text class="value">{{order.phone}}</text>
+    </view>
+    <view class="info">
+        <text class="name">详细地址</text>
+        <text class="value">{{order.address}}</text>
+    </view>
+    <view class="section-title">商品信息</view>
+    <view class="info">
+        <text class="name">商品名称</text>
+        <text class="value">{{order.snapshot.title}}</text>
+    </view>
+    <view class="info">
+        <text class="name">商品简介</text>
+        <text class="value">{{order.snapshot.description}}</text>
+    </view>
+    <view class="info">
+        <text class="name">商品价格</text>
+        <text class="value">￥{{order.snapshot.price}}</text>
+    </view>
+    <view class="btn-pay" wx:if="{{order.status===0}}">
+        <button type="primary" bindtap="handlePay">支付</button>
+    </view>
+</view>

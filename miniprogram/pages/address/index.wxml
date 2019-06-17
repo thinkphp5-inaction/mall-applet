@@ -1,0 +1,18 @@
+<!-- miniprogram/pages/address/index.wxml -->
+<view class="page-address">
+    <view class="list">
+        <view class="list-item" wx:key="{{item.id}}" wx:for="{{list}}" data-id="{{item.id}}" bindtap="handleItemTap">
+            <view>
+                <view class="primary">
+                    {{item.realname}} {{item.phone}}
+                    <text class="label label-success" wx:if="{{item.default}}">默认</text>
+                </view>
+                <view class="secondary">{{item.address}}</view>
+            </view>
+            <image src="../../assets/icon-arrow-right.png" class="icon" />
+        </view>
+    </view>
+    <view class="btn-container">
+        <button type="primary" bindtap="navigateToCreate">添加地址</button>
+    </view>
+</view>
