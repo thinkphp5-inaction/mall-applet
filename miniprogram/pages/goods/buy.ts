@@ -92,6 +92,7 @@ Page({
     })
   },
   pay(order: any) {
+    const self = this
     request({
       url: `/index/order/pay?order_id=${order.order_id}`,
       success() {
@@ -103,7 +104,7 @@ Page({
         wx.showToast({ title: e.errMsg, icon: 'none' })
       },
       complete() {
-        this.setData!({ loading: false })
+        self.setData!({ loading: false })
       }
     })
   }
